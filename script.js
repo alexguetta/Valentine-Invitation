@@ -24,7 +24,7 @@ function celebrate() {
         <p>אני אבחר בך בכל שנה להיות הוולנטיין שלי!!❤️</p>
         
         <div class="video-container">
-            <video id="val-video" width="100%" controls autoplay>
+            <video id="val-video" width="100%" controls autoplay playsinline>
                 <source src="images/our-video.mp4" type="video/mp4">
                 הדפדפן שלך לא תומך בנגן הווידאו.
             </video>
