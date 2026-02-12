@@ -83,6 +83,19 @@ button {
     z-index: 1;
 }
 
+.video-container {
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ff4b6e;
+}
+
+video {
+    display: block;
+    width: 100%;
+}
+
 @keyframes float {
     0% {
         transform: translateY(100vh);
