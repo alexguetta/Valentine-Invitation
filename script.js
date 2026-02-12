@@ -16,13 +16,28 @@ function moveNo() {
 }
 
 function celebrate() {
-    document.getElementById('main-content').innerHTML = `
-        <h1 style="font-size: 3rem;">🎉 ❤️ 🎉</h1>
-        <h2>ידעתי!</h2>
-        <p>אני אוהב אותך ואבחר בך בכל שנה להיות הוולנטיין שלי ❤️</p>
-        <img src="images/celebrate.gif" style="width:100%; border-radius:15px; margin-top:10px;">
+    const content = document.getElementById('main-content');
+
+    content.innerHTML = `
+        <h1 style="font-size: 2.5rem;">🎉 ❤️ 🎉</h1>
+        <h2>היידההההה היא אמרה לי כןןןןן</h2>
+        <p>אני אבחר בך בכל שנה להיות הוולנטיין שלי!!❤️</p>
+        
+        <div class="video-container">
+            <video id="val-video" width="100%" controls autoplay>
+                <source src="images/our-video.mp4" type="video/mp4">
+                הדפדפן שלך לא תומך בנגן הווידאו.
+            </video>
+        </div>
     `;
-    setInterval(createHeart, 50);
+
+
+    setInterval(createHeart, 100);
+
+    const video = document.getElementById('val-video');
+    video.play().catch(error => {
+        console.log("Auto-play was prevented, waiting for user interaction.");
+    });
 }
 
 function createHeart() {
@@ -33,7 +48,11 @@ function createHeart() {
     heart.style.fontSize = Math.random() * 20 + 10 + 'px';
     heart.style.animationDuration = Math.random() * 2 + 3 + 's';
     document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 4000);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 4000);
 }
 
-setInterval(createHeart, 300);
+
+setInterval(createHeart, 500);
